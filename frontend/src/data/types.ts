@@ -17,6 +17,8 @@ export type ModuleMeta = {
   statuses: string[]
   actions: string[]
   actionTargets: Record<string, string>
+  // 约定了前置状态的动作：只能从指定状态一段一段往前推，倒序、跳段改动一律挡下。
+  actionFrom?: Record<string, string>
   metrics: string[]
 }
 
